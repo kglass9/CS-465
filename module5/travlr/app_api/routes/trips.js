@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const controller= require('../controllers/trips');
+const ctrlTrips= require('../controllers/trips');
 
 /* GET tripsList page. */
-router.get('/', controller.tripsList);
-router.get('/', controller.tripsFindCode);
+router.get('/trips', ctrlTrips.tripsList);
+router.get('/trips/:tripCode', ctrlTrips.tripsFindCode);
 
 module.exports = router;
